@@ -1,0 +1,140 @@
+<!--
+    Copyright (C) 2022-2023 Nurudin Imsirovic <github.com/oxou>
+    Created: 2022-12-25 03:28 AM
+    Updated: 2023-01-05 05:34 PM
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Browser starting...</title>
+    <link rel="stylesheet" type="text/css" href="css/window-frame.css">
+    <link rel="stylesheet" type="text/css" href="css/browser-shell.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<preloader></preloader>
+<!-- PRELOADER -->
+
+<!-- WINDOW-FRAME -->
+<window-frame tabindex="0">
+    <!-- WINDOW-TITLEBAR -->
+    <window-titlebar class="drag-enable">
+        <!-- WINDOW-TITLE -->
+        <window-title>
+            <data-icon data-icon="images/icon/app.png"></data-icon>
+            <!-- DATA-BROWSER-TAB-CONTAINER -->
+            <browser-tab-container>
+                <!--
+                <browser-tab data-uuid="00000000-0000-0000-0000-000000000000">
+                    <data-icon></data-icon>
+                    <data-text></data-text>
+                    <button shell-action="browser.tab.exit" class="tab-exit"></button>
+                </browser-tab>
+                -->
+
+                <button shell-action="browser.tab.new" class="tab-new drag-disable"></button>
+            </browser-tab-container>
+
+            <!-- DATA-BROWSER-TAB-CONTAINER -->
+
+            <!--<data-text>Browser starting...</data-text>-->
+        </window-title>
+        <!-- WINDOW-TITLE -->
+
+        <window-buttons class="drag-disable" data-init="minimize,maximize,close"></window-buttons>
+    </window-titlebar>
+    <!-- WINDOW-TITLEBAR -->
+
+    <!-- WINDOW-INNER -->
+    <window-inner>
+        <!-- BROWSER-SHELL -->
+        <browser-shell>
+            <!-- NAVIGATION -->
+            <navigation>
+                <!-- DATA-BUTTONS -->
+                <data-buttons>
+                    <button shell-action="browser.navigate.prev" class="nav-prev"></button>
+                    <button shell-action="browser.navigate.next" class="nav-next"></button>
+                    <!--<button shell-action="browser.navigate.home" class="nav-home"></button>-->
+                    <button shell-action="browser.navigate.reload" class="nav-reload"></button>
+                </data-buttons>
+                <!-- DATA-BUTTONS -->
+
+                <!-- DATA-ADDRESS -->
+                <data-address>
+                    <!-- DATA-ADDRESS-URL -->
+                    <data-url tabindex="1" contenteditable="true"></data-url>
+                    <!-- DATA-ADDRESS-URL -->
+                </data-address>
+                <!-- DATA-ADDRESS -->
+
+                <button shell-action="browser.tab.make.qr_code" class="nav-make-qr-code reversed-borders"></button>
+                <button shell-action="browser.nav.options.menu" class="nav-options-menu reversed-borders"></button>
+            </navigation>
+            <!-- NAVIGATION -->
+
+            <browser-frame-qrcode data-hidden="1" class="browser-shell-child-at-front browser-dropdown-frame">
+                <img data-id="image" src="images/placeholder/1x1.png">
+                <button shell-action="browser.frame.qr.close">Close</button>
+            </browser-frame-qrcode>
+
+            <browser-frame-options-menu data-hidden="1" class="browser-shell-child-at-front browser-dropdown-frame">
+                <button shell-action="browser.opt.new-tab">New Tab</button>
+                <button shell-action="browser.opt.print">Print...</button>
+                <button shell-action="browser.opt.about">About</button>
+                <button shell-action="browser.opt.exit">Exit</button>
+            </browser-frame-options-menu>
+        </browser-shell>
+        <!-- BROWSER-SHELL -->
+
+        <!-- TAB'S WEBSITE -->
+        <browser-tab-frames>
+            <!--<tab-frame data-uuid="" data-half="0">-->
+                <!--<iframe class="tab-frame" src="https://google.com" nwfaketop nwUserAgent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"></iframe>-->
+            <!--</tab-frame>-->
+        </browser>
+        <!-- TAB'S WEBSITE -->
+    </window-inner>
+    <!-- WINDOW-INNER -->
+
+    <!-- MENUS -->
+    <menus data-hidden="1">
+        <menu data-id="tab-menu">
+            <item shell-action="item.tab.reload">Reload</item>
+            <item shell-action="item.tab.duplicate">Duplicate</item>
+            <item shell-action="item.tab.close">Close</item>
+            <item shell-action="item.tab.close-other-tabs">Close other tabs</item>
+        </menu>
+
+        <menu data-id="address-bar">
+            <item shell-action="item.address.copy.url">Copy URL</item>
+            <item shell-action="item.address.copy.path">Copy Path</item>
+            <item shell-action="item.address.get.qr-code">Get QR Code</item>
+        </menu>
+    </menus>
+    <!-- MENUS -->
+</window-frame>
+<!-- WINDOW-FRAME -->
+
+<!-- BACKEND -->
+<backend data-hidden="1">
+    <dynamic-tab-width>
+        <style></style>
+    </dynamic-tab-width>
+</backend>
+<!-- BACKEND -->
+
+<script type="text/javascript" src="js/window-frame.js"></script>
+<script type="text/javascript" src="js/extra/utils.js"></script>
+<script type="text/javascript" src="js/browser/shell.js"></script>
+<script type="text/javascript" src="js/backend.js"></script>
+<script type="text/javascript" src="js/extra/qr-code.js"></script>
+<script type="text/javascript" src="js/browser/event-handler.js"></script>
+<script type="text/javascript" src="js/browser/tab-state.js"></script>
+
+<script type="text/javascript" src="js/browser/startup.js"></script>
+
+</body>
+</html>

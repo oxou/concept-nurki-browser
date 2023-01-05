@@ -1,0 +1,40 @@
+/* Updated: 2023-01-05 05:25 PM */
+
+* {
+    outline: none !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: fixed;
+    width: 350px;
+    height: 250px;
+    top: calc(50% - 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#container * {
+    line-height: 0;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.browser-logo {
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/icon/app.png");
+    width: 100%;
+    height: 112px;
+}
+
+a:link {
+    color: rgba(0, 120, 240);
+}

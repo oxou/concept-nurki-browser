@@ -1,0 +1,311 @@
+/* Updated: 2023-01-05 05:36 PM */
+
+.tab-frame {
+    border: none;
+    width: calc(100% - 2px);
+    height: calc(100% - 63px);
+    float: left;
+    position: fixed;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    top: 62px;
+}
+
+preloader {
+    display: none;
+}
+
+browser-shell,
+browser-shell * {
+    box-sizing: border-box;
+}
+
+browser-shell {
+    width: 100%;
+    height: 31px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #aaa;
+    float: left;
+    display: block;
+}
+
+browser-shell navigation {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+browser-shell navigation data-buttons {
+    width: 93px;
+    height: 100%;
+    float: left;
+}
+
+browser-shell button {
+    background-color: #fff;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-right: 1px solid #aaa;
+    box-sizing: border-box;
+    height: 100%;
+    width: 31px;
+    float: left;
+    text-align: left;
+}
+
+browser-shell button:hover {
+    background-color: #eee;
+}
+
+browser-shell button:active {
+    background-color: #ddd;
+}
+
+browser-shell button.nav-prev {
+    background-image: url("../images/shell/nav/nav-prev.png");
+}
+
+browser-shell button.nav-next {
+    background-image: url("../images/shell/nav/nav-next.png");
+}
+
+browser-shell button.nav-home {
+    background-image: url("../images/shell/nav/nav-home.png");
+}
+
+browser-shell button.nav-reload {
+    background-image: url("../images/shell/nav/nav-reload.png");
+}
+
+browser-shell button.reversed-borders {
+    border: none;
+    border-left: 1px solid #aaa;
+}
+
+browser-shell button.nav-make-qr-code {
+    background-image: url("../images/shell/nav/tab-qrcode.png");
+}
+
+browser-shell button.nav-options-menu {
+    background-image: url("../images/shell/nav/nav-menu.png");
+}
+
+browser-shell navigation data-address {
+    width: calc(100% - 155px);
+    height: 100%;
+    float: left;
+    cursor: text'
+}
+
+browser-shell navigation data-address data-url {
+    background: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 175%;
+    padding: 0 4px;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+browser-shell navigation data-address data-url:focus {
+    border-color: #aaa;
+}
+
+browser-tab-container {
+    display: block;
+    width: calc(100% - 31px);
+    height: 100%;
+    float: left;
+    -webkit-app-region: drag !important;
+    overflow: hidden;
+}
+
+browser-tab-container browser-tab {
+    background-color: #fff;
+    float: left;
+    width: 180px;
+    min-width: 61px;
+    max-width: 220px;
+    height: 100%;
+    display: block;
+    border-right: 1px solid #aaa;
+    box-sizing: border-box;
+    -webkit-app-region: no-drag !important;
+    overflow: hidden;
+}
+
+browser-tab-container browser-tab,
+browser-tab-container browser-tab * {
+    cursor: default;
+}
+
+browser-tab-container browser-tab:hover {
+    background-color: #eee;
+}
+
+browser-tab-container browser-tab:active {
+    background-color: #ddd;
+}
+
+browser-tab-container browser-tab data-icon {
+    background-size: 16px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 30px;
+    height: 100%;
+    display: block !important;
+    float: left;
+    border: none !important;
+}
+
+browser-tab-container browser-tab data-text {
+    float: left;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 60px);
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+browser-tab-container browser-tab[data-focused="1"] {
+    background-color: #f8f8f8;
+}
+
+browser-tab-container button,
+window-title button[shell-action] {
+    background-color: #fff;
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 100%;
+    border: none;
+}
+
+browser-tab-container button:hover,
+window-title button[shell-action]:hover {
+    background-color: #eee;
+}
+
+browser-tab-container button:active,
+window-title button[shell-action]:active {
+    background-color: #ddd;
+}
+
+browser-tab-container button.tab-exit {
+    background-image: url("../images/shell/nav/tab-exit.png");
+}
+
+browser-tab-container button.tab-exit:hover {
+    background-color: #f00;
+    background-image: url("../images/shell/nav/tab-exit-invert.png");
+}
+
+browser-tab-container button.tab-exit:active {
+    background-color: #a00;
+}
+
+window-title button.tab-new {
+    background-image: url("../images/shell/nav/tab-add.png");
+}
+
+browser-tab-frames {
+    pointer-events: none;
+}
+
+tab-frame {
+    pointer-events: none;
+}
+
+tab-frame iframe {
+    pointer-events: all;
+}
+
+browser-tab-frames,
+browser-tab-frames tab-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+browser-tab-frames tab-frame[data-half="1"] .tab-frame {
+    width: 50%;
+}
+
+browser-tab-frames tab-frame[data-half="1"] .tab-frame:first-child {
+    width: calc(50% - 1px);
+    border-right: 1px solid #aaa;
+}
+
+.browser-dropdown-frame {
+    background: #fff;
+    position: absolute;
+    top: 61px;
+    right: 0;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.browser-dropdown-frame button {
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    border: none;
+}
+
+.browser-dropdown-frame button:hover {
+    background-color: #eee;
+}
+
+.browser-dropdown-frame button:active {
+    background-color: #ddd;
+}
+
+browser-frame-qrcode {
+    width: 160px;
+    height: 188px;
+}
+
+browser-frame-qrcode * {
+    float: left;
+}
+
+browser-frame-qrcode img {
+    width: 128px;
+    height: 128px;
+    position: relative;
+    top: 16px;
+    left: 16px;
+}
+
+browser-frame-qrcode button {
+    margin-top: 29px;
+    text-align: center;
+}
+
+browser-frame-options-menu {
+    width: 160px;
+}
+
+*[data-hidden="1"] {
+    display: none !important;
+}
+
+*[data-hidden="0"] {
+    display: initial !important;
+}
+
+.browser-shell-child-at-front {
+    z-index: 999 !important;
+}

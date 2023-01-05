@@ -1,0 +1,180 @@
+/* Updated: 2023-01-05 05:37 PM */
+
+* {
+    outline: 0 !important;
+}
+
+html,
+body {
+    background: rgba(0,0,0,0);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+menus menu,
+menus menu * {
+    box-sizing: border-box;
+}
+
+menus menu::selection,
+menus menu *::selection {
+    background: none;
+}
+
+menus menu {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    width: 200px;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    padding: 0;
+    pointer-events: none;
+    cursor: default !important;
+    margin: 0;
+}
+
+menus menu item {
+    background-color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 24px;
+    line-height: 150%;
+    pointer-events: all;
+    padding: 0 5px;
+}
+
+menus menu item:hover {
+    background-color: rgba(128, 128, 128, .25);
+}
+
+menus menu item:active {
+    background-color: rgba(128, 128, 128, .5);
+}
+
+window-frame {
+    border: 1px solid #aaa;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+}
+
+window-frame window-titlebar,
+window-frame window-titlebar * {
+    box-sizing: border-box;
+}
+
+window-frame window-titlebar {
+    border-bottom: 1px solid #aaa;
+    color: #000;
+    height: 30px;
+    width: 100%;
+    display: block;
+    float: left;
+
+    /* WIN32 */
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+
+window-frame window-titlebar window-title {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - 135px);
+}
+
+window-frame window-titlebar window-title data-icon {
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    display: none;
+    border-right: 1px solid #aaa;
+}
+
+window-frame window-titlebar window-title data-icon[data-state="disabled"],
+window-frame window-titlebar window-title data-text[data-state="disabled"] {
+    display: none;
+}
+
+window-frame window-titlebar window-buttons {
+    display: block;
+    height: 100%;
+    float: right;
+}
+
+window-frame window-titlebar window-buttons button {
+    background: none;
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    width: 45px;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+window-frame window-titlebar window-buttons button:hover {
+    background-color: rgba(128, 128, 128, .25);
+}
+
+window-frame window-titlebar window-buttons button:active {
+    background-color: rgba(128, 128, 128, .5);
+}
+
+window-frame window-titlebar window-buttons button.close {
+    background-image: url("../images/titlebar-button/close-black.png");
+}
+
+window-frame window-titlebar window-buttons button.close:hover {
+    background-image: url("../images/titlebar-button/close-white.png");
+    background-color: rgba(255, 0, 0, 1);
+}
+
+window-frame window-titlebar window-buttons button.close:active {
+    background-color: rgba(255, 0, 0, .5);
+}
+
+window-frame window-titlebar window-buttons button.maximize {
+    background-image: url("../images/titlebar-button/maximize-black.png");
+}
+
+window-frame window-titlebar window-buttons button.maximize[data-can-restore="1"] {
+    background-image: url("../images/titlebar-button/restore-black.png");
+}
+
+window-frame window-titlebar window-buttons button.minimize {
+    background-image: url("../images/titlebar-button/minimize-black.png");
+}
+
+.drag-enable {
+    -webkit-app-region: drag !important;
+}
+
+.drag-enable-recursive,
+.drag-enable-recursive * {
+    -webkit-app-region: drag !important;
+}
+
+.drag-disable {
+    -webkit-app-region: no-drag !important;
+}
+
+.drag-disable-recursive,
+.drag-disable-recursive * {
+    -webkit-app-region: no-drag !important;
+}

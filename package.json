@@ -1,0 +1,10 @@
+{
+    "chromium-args": "--disable-breakpad --disable-canvas-aa --disable-composited-antialiasing --disable-cookie-encryption --disable-crash-reporter --disable-default-apps --disable-font-subpixel-positioning --disable-gaia-services --disable-gpu-early-init --disable-lcd-text --force_high_performance_gpu --disable-dwm-composition",
+    "main": "runtime/index.html",
+    "name": "nurki-browser",
+    "window": {
+        "frame": false,
+        "icon": "app.png",
+        "transparent": true
+    }
+}
