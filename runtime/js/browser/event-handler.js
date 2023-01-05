@@ -4,7 +4,7 @@
 // buttons, address bar, and much more.
 //
 // Created: 2022-12-25 05:35 PM
-// Updated: 2023-01-05 05:25 PM
+// Updated: 2023-01-06 12:47 AM
 //
 
 windowFrame.addEventListener("auxclick", function(eventObject) {
@@ -263,4 +263,8 @@ windowFrame.addEventListener("mousedown", function(eventObject) {
             }
         }
     }
+});
+
+windowFrame.addEventListener("contextmenu", function(eventObject) {
+    eventObject.preventDefault();
 });
