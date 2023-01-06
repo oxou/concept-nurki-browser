@@ -4,7 +4,7 @@
 // buttons, address bar, and much more.
 //
 // Created: 2022-12-25 05:35 PM
-// Updated: 2023-01-06 12:47 AM
+// Updated: 2023-01-06 01:39 AM
 //
 
 windowFrame.addEventListener("auxclick", function(eventObject) {
@@ -116,11 +116,13 @@ windowFrame.addEventListener("click", function(eventObject) {
 
     // Print page
     if (shellAction == "browser.opt.print") {
+        hideOtherMenuLikeElements();
         browserTabState.frame.contentWindow.print();
         return;
     }
 
     if (shellAction == "browser.opt.about") {
+        hideOtherMenuLikeElements();
         browserCreateNewTab(browserURLAbout, true, false);
         return;
     }
