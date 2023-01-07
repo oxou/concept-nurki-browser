@@ -3,7 +3,7 @@
 // Browser - New Tab
 //
 // Created: 2022-12-25 06:58 PM
-// Updated: 2023-01-05 05:29 PM
+// Updated: 2023-01-07 02:26 AM
 //
 
 var browserForceURL = "browser://new-tab";
@@ -105,6 +105,8 @@ searchProvider.select = function(providerId) {
         else
             providerButton.setAttribute("data-selected", '0');
     }
+
+    searchQuery.focus();
 }
 
 searchQuery.addEventListener("keyup", function(eventObject) {
